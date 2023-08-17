@@ -1,15 +1,17 @@
-import * as react_jsx_runtime from 'react/jsx-runtime';
+import React, { ButtonHTMLAttributes, FC } from 'react';
 
-interface ButtonProps {
-    primary?: boolean;
-    backgroundColor?: string;
-    size?: "small" | "medium" | "large";
+type ButtonProps = {
+    type?: "button" | "submit" | "reset";
+    variant: "outlined" | "contained" | "text" | "neo" | "glass" | "circular";
+    color: "primary" | "secondary" | "success" | "warning" | "danger" | "info" | "light" | "dark";
+    size: "small" | "medium" | "large";
+    className?: string;
+    style?: React.CSSProperties;
+    asChild?: boolean;
     label: string;
+    disabled?: boolean;
     onClick?: () => void;
-}
-declare function Button({ primary, size, backgroundColor, label, ...props }: ButtonProps): react_jsx_runtime.JSX.Element;
-declare namespace Button {
-    var displayName: string;
-}
+} & ButtonHTMLAttributes<HTMLButtonElement>;
+declare const Button: FC<ButtonProps>;
 
 export { Button, ButtonProps };

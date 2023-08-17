@@ -10,7 +10,21 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: 'color' },
+    variant: {
+      options: ['contained', 'outlined', 'text', 'neo', 'glass', 'circular'],
+      control: { type: 'select' },
+      description: 'The variant to use.',
+      defaultValue: 'contained',
+    },
+    color: {
+      options: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'],
+      control: { type: 'select' },
+      defaultValue: 'primary',
+    },
+    disabled: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
   },
 } satisfies Meta<typeof Button>;
 
@@ -19,21 +33,22 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    variant: 'contained',
+    color: 'primary',
+    children: 'Submit'
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    color: 'primary',
   },
 };
 
 export const Large: Story = {
   args: {
     size: 'large',
-    label: 'Button',
+    color: 'primary',
   },
 };
 
