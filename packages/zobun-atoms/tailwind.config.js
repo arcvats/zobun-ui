@@ -35,6 +35,40 @@ module.exports = {
 				DEFAULT: "hsl(0, 0%, 21%)",
 				foreground: "hsl(0, 0%, 96%)",
 			},
+			neo: {
+				primary: {
+					DEFAULT: "hsl(240, 100%, 50%)",
+					foreground: "hsl(0, 0%, 100%)",
+				},
+				secondary: {
+					DEFAULT: "hsl(0, 0%, 50%)",
+					foreground: "hsl(0, 0%, 100%)",
+				},
+				success: {
+					DEFAULT: "hsl(120, 100%, 25%)",
+					foreground: "hsl(0, 0%, 100%)",
+				},
+				warning: {
+					DEFAULT: "hsl(60, 100%, 50%)",
+					foreground: "hsl(0, 0%, 0%)",
+				},
+				danger: {
+					DEFAULT: "hsl(0, 100%, 50%)",
+					foreground: "hsl(0, 0%, 100%)",
+				},
+				info: {
+					DEFAULT: "hsl(195, 53%, 79%)",
+					foreground: "hsl(0, 0%, 0%)",
+				},
+				light: {
+					DEFAULT: "hsl(0, 0%, 100%)",
+					foreground: "hsl(0, 0%, 0%)",
+				},
+				dark: {
+					DEFAULT: "hsl(0, 0%, 0%)",
+					foreground: "hsl(0, 0%, 100%)",
+				},
+			},
 		},
 		extend: {},
 	},
