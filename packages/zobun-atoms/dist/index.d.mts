@@ -12,6 +12,7 @@ type ButtonProps = {
     disabled?: boolean;
     onClick?: () => void;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
+
 declare const Button: FC<ButtonProps>;
 
 export { Button, ButtonProps };

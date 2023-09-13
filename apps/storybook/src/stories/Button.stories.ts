@@ -21,6 +21,11 @@ const meta = {
       control: { type: 'select' },
       defaultValue: 'primary',
     },
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: { type: 'select' },
+      defaultValue: 'medium',
+    },
     disabled: {
       control: { type: 'boolean' },
       defaultValue: false,
@@ -31,30 +36,56 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Contained: Story = {
   args: {
     variant: 'contained',
     color: 'primary',
-    children: 'Submit'
+    children: 'Submit',
+    size: 'medium'
   },
 };
 
-export const Secondary: Story = {
+export const Outlined: Story = {
   args: {
+    variant: 'outlined',
     color: 'primary',
+    children: 'Submit',
+    size: 'medium'
   },
 };
 
-export const Large: Story = {
+export const Text: Story = {
   args: {
-    size: 'large',
+    variant: 'text',
     color: 'primary',
+    children: 'Submit',
+    size: 'medium'
   },
 };
 
-export const Small: Story = {
+export const Neo: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
+    variant: 'neo',
+    color: 'primary',
+    children: 'Submit',
+    size: 'medium'
+  },
+};
+
+export const Glass: Story = {
+  args: {
+    variant: 'glass',
+    color: 'primary',
+    children: 'Submit',
+    size: 'medium'
+  },
+};
+
+export const Circular: Story = {
+  args: {
+    variant: 'circular',
+    color: 'primary',
+    children: 'Submit',
+    size: 'medium'
   },
 };
