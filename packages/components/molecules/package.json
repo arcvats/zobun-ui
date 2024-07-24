@@ -1,0 +1,51 @@
+{
+  "name": "@zobun-ui/molecules",
+  "version": "0.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc",
+    "react-dom": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc",
+    "tailwindcss": "^3.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "homepage": "https://github.com/arcvats/zobun-ui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcvats/zobun-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arcvats/zobun-ui/issues"
+  }
+}

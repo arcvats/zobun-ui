@@ -1,0 +1,22 @@
+{
+  "testEnvironment": "jsdom",
+  "roots": ["<rootDir>/packages"],
+  "testMatch": ["**/?(*.)+(test).+(ts|tsx|js)"],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@zobun-ui/utils-(.+)$": "<rootDir>packages/utils/$1/src",
+    "@zobun-ui/(.+)$": "<rootDir>packages/components/organisms/$1/src",
+    "@zobun-ui/atoms": "<rootDir>packages/components/atoms/$1/src",
+    "@zobun-ui/molecules": "<rootDir>packages/components/molecules/$1/src"
+  },
+  "watchPlugins": [
+    "jest-watch-typeahead/filename",
+    "jest-watch-typeahead/testname"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/scripts/setupTests.ts",
+    "jest-axe/extend-expect"
+  ]
+}
